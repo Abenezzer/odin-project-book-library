@@ -23,3 +23,21 @@ function displayBooks() {
     console.log(myLibrary[i]);
   }
 }
+
+// Add new book modal form
+
+const addBookbtn = document.querySelector("#add-book");
+const bgOverlay = document.querySelector(".overlay");
+const modal = document.querySelector(".modal");
+
+addBookbtn.addEventListener("click", (e) => {
+  bgOverlay.style.display = "flex";
+  modal.style.display = "block";
+});
+
+// remove the modal when a user click outside the modal
+
+bgOverlay.addEventListener("click", (e) => {
+  bgOverlay.style.display = "none";
+  modal.style.display = "none";
+});

@@ -81,9 +81,8 @@ main {
 }
 
 .modal {
-  
   position: fixed;
-  top: 30%;
+  top: 20%;
   left: 40%;
   border-radius: 10px;
   padding: 20px;
@@ -91,6 +90,7 @@ main {
   /* margin: 0 auto; */
   display: none;
   background-color: chocolate;
+  z-index: 10;
 }
 
 .modal form {
@@ -116,6 +116,7 @@ main {
   outline: none;
   border: none;
   border-radius: 5px;
+  font-size: 16px;
 }
 
 .modal button {
@@ -128,6 +129,7 @@ main {
   color: #fff;
   font-weight: bold;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 /* background overlay for form modal */

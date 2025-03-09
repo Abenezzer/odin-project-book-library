@@ -19,7 +19,7 @@
             />
             <button>Filter</button>
           </div>
-          <button>Add new Book</button>
+          <button id="add-book">Add new Book</button>
         </div>
       </div>
     </nav>
@@ -45,31 +45,29 @@
       <form>
         <div class="form-control">
           <label for="title"> TITLE</label>
-          <input type="text" id="title" name="title" />
+          <input type="text" id="title" name="title" required />
         </div>
 
         <div class="form-control">
           <label for="author">AUTHOR</label>
-          <input type="text" id="author" name="author" />
+          <input type="text" id="author" name="author" required />
         </div>
 
         <div class="form-control">
           <label for="publishedDate">PUBLISHED DATE</label>
-          <input type="date" id="publishedDate" name="publishedDate" />
+          <input type="date" id="publishedDate" name="publishedDate" required />
         </div>
 
         <div class="form-control">
           <label for="price">PRICE</label>
-          <input type="number" id="price" name="price" />
+          <input type="number" id="price" name="price" required />
         </div>
 
         <button type="submit">Add Book</button>
       </form>
     </div>
 
-    <div class="overlay">
-        
-    </div>
+    <div class="overlay"></div>
   </body>
 
   <script src="./script.js"></script>
