@@ -13,3 +13,53 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.container {
+  margin: 0 auto;
+  max-width: 1050px;
+}
+
+nav {
+  background-color: chocolate;
+  color: wheat;
+  padding: 20px 0;
+}
+
+.nav-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .title {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 24px;
+  color: wheat;
+  letter-spacing: 1.5px;
+}
+
+nav input {
+  height: 35px;
+  border: none;
+  padding: 0 10px;
+  font-size: 16px;
+  outline: none;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+nav button {
+  padding: 8px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(56, 56, 252);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background-color: rgb(71, 71, 223);
+}
