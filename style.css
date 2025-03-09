@@ -144,3 +144,23 @@ main {
   height: 100vh;
   z-index: 5;
 }
+
+.action-td button {
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: wheat;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.action-td .action-read {
+  background-color: yellow;
+  color: #000;
+  margin-right: 5px;
+}
+
+.action-td .action-delete {
+  background-color: red;
+}
