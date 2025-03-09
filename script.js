@@ -1,5 +1,13 @@
-const myLibrary = [];
-
+let myLibrary = [
+  new Book("The power of now", "Ekhart Tolle", Date.now(), 40),
+  new Book(
+    "The subtle arts of not giving a fu*k",
+    "Mark Manson",
+    Date.now(),
+    45
+  ),
+];
+displayBooks(myLibrary);
 // create a book constructor
 function Book(title, author, publishedDate, price) {
   if (!new.target)
@@ -22,6 +30,7 @@ function addBookToLibrary(name, author, publishedDate, price) {
 // display all the books to the user
 function displayBooks(books) {
   const tbody = document.querySelector("tbody");
+  tbody.innerHTML = "";
   for (let i = 0; i < books.length; i++) {
     const tr = document.createElement("tr");
     const tds = `
@@ -37,7 +46,7 @@ function displayBooks(books) {
     `;
     tr.innerHTML = tds;
     tbody.appendChild(tr);
-    console.log(tr);
+    
   }
 }
 
@@ -57,11 +66,30 @@ form.addEventListener("submit", (e) => {
   modal.style.display = "none";
 });
 
-// mark books as read 
+const tbody = document.querySelector("tbody");
+
+tbody.addEventListener("click", (e) => {
+  if (e.target.hasAttribute("data-id")) {
+    if (e.target.classList.contains("action-read")) {
+      markAsRead(e.target.dataset.id);
+    } else {
+      deleteBook(e.target.dataset.id);
+    }
+  }
+});
 
 function markAsRead(id) {
-  const book = myLibrary.filter(book => book.id === id);
-  console.log(book);
+  myLibrary = myLibrary.map((book) =>
+    book.id === id ? { ...book, status: "Read" } : book
+  );
+  displayBooks(myLibrary);
+}
+
+// Delete book
+
+function deleteBook(id) {
+  myLibrary = myLibrary.filter((book) => book.id !== id);
+  displayBooks(myLibrary);
 }
 
 // Add new book modal form
@@ -79,4 +107,3 @@ bgOverlay.addEventListener("click", (e) => {
   bgOverlay.style.display = "none";
   modal.style.display = "none";
 });
-

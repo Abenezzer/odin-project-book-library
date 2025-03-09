@@ -153,6 +153,7 @@ main {
   border: none;
   outline: none;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .action-td .action-read {
