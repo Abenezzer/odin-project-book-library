@@ -165,3 +165,7 @@ main {
 .action-td .action-delete {
   background-color: red;
 }
+
+table {
+  min-width: 900px;
+}
