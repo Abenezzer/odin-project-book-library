@@ -63,3 +63,19 @@ nav button {
 nav button:hover {
   background-color: rgb(71, 71, 223);
 }
+
+table,
+tr,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+main {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
