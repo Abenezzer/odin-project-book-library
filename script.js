@@ -46,7 +46,6 @@ function displayBooks(books) {
     `;
     tr.innerHTML = tds;
     tbody.appendChild(tr);
-    
   }
 }
 
@@ -85,8 +84,28 @@ function markAsRead(id) {
   displayBooks(myLibrary);
 }
 
-// Delete book
+// Filter a book based on their title
 
+const filterButton = document.querySelector("#filter");
+const input = document.querySelector(".search input");
+console.log(input.value);
+
+filterButton.addEventListener("click", (e) => {
+  if (input.value === "") {
+    console.log("dfdkf");
+    displayBooks(myLibrary);
+  } else {
+    filterBook(input.value);
+    input.value = "";
+  }
+});
+
+function filterBook(title) {
+  const books = myLibrary.filter((book) => book.title === title);
+  displayBooks(books);
+}
+
+// Delete book
 function deleteBook(id) {
   myLibrary = myLibrary.filter((book) => book.id !== id);
   displayBooks(myLibrary);
